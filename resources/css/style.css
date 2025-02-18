@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap');
+
+@media screen and (max-width:900px) {
+  .bouton {width: 30%;}
+}
+
+@media screen and (max-width: 1400px) {
+  .nav a:not(:first-child) {display: none;}
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+html, body {
+  height: 100%; /* Assure que le body prend toute la hauteur de la page */
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans';
+}
+
+#body {
+  margin: auto;
+  width: 90%;
+  box-sizing: border-box;
+  box-shadow: black 20px;
+  border: 0;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  min-height: 100%; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.content {
+  padding-top: 70px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 2px solid grey;
+}
+
+.imglogo {
+  display: flex;
+  align-items: center;
+}
+
+.imglogo1 {
+  width: 200px;
+  height: auto;
+}
+
+.mid {
+  padding: 15px;
+  padding-top: 120px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+  
+.nav a {
+  font-weight: bold;
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 30px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration: 0.4s;
+  margin: 2px;
+}
+  
+.nav a:hover {
+  background-color: #79c0ff;
+  color: black;
+  border-radius: 10px;
+}
+
+.nav a.active {
+  background-color: #0056d6;
+  color: white;
+}
+  
+.nav .icon {
+  display: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: 900;
+}
+
+li:hover{
+  border-bottom-color: red;
+}
+
+section {
+  color: black;
+}
+
+.présentation {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bienvenue {
+  padding: 15px;
+}
+
+#maps {
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.message-succes {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 20px 0;
+  border: 1px solid #c3e6cb;
+  text-align: center;
+}
+
+.modif {
+  padding: 15px;
+}
+
+.site_externe {
+  text-align: center;
+  align-items: center;
+}
+
+.redir {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  margin: 30px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #013e9a;
+  cursor: pointer;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0056b3;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+.conteneur_acceuil {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  overflow: hidden; /* Assure que le pseudo-élément reste contenu dans les bordures */
+}
+
+.conteneur_acceuil::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #013e9a;
+  background-size: cover;
+  background-position: center;
+  z-index: 0; /* Place le pseudo-élément derrière le contenu */
+}
+
+.conteneur_acceuil > * {
+  position: relative;
+  z-index: 1; /* Place le contenu au-dessus de l'image de fond */
+}
+
+.paragraphe {
+  max-width: 1000px;
+  padding: 30px;
+  background-color: #e3ebf0;
+  border-left: 5px solid h2;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.paragraphe p {
+  font-size: 1.25rem;
+  color: #555;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; 
+  background-color: #f1f1f1;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; 
+}
+
+footer li {
+    font-size: 14px;
+}
+
+footer {
+  margin-top: auto; 
+}
+
+.paragraphe li {
+  margin: 8px 0;
+  padding-left: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.paragraphe li::marker {
+  color: #0056b3;
+  font-weight: bold;
+}
+
+.map {
+  display: flex;
+  justify-content: center;
+}
+
+.nous-contacter {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
