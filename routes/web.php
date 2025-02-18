@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/gouvernance', function () {
     return view('gouvernance.gouvernance');
@@ -22,8 +22,12 @@ Route::get('/actualites', function () {
     return view('actualites.actualites');
 })->name('actualites');
 
-Route::get('/auth', function () {
-    return view('auth.connexion');
-})->name('connexion');
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
 
 
