@@ -1,13 +1,12 @@
 @extends('layout.app')
 @section('content')
     
-
 <link rel="stylesheet" href="../css/connexion.css">
 
-            <div class="container">
-                <div class="login-container">
+<div class="container">
+    <div class="login-container">
                     <h2>S'inscrire</h2>
-
+                    
                     <?php
                     // Afficher un message d'erreur si l'email existe déjà
                     if (isset($_GET['error']) && $_GET['error'] == 'email_exists') {
@@ -15,7 +14,7 @@
                     }
                     ?>
 
-                    <form action="inscription.php" method="POST">
+<form action="inscription.php" method="POST">
                         <div class="input-group">
                             <label for="nom">Nom</label>
                             <input type="text" id="nom" name="nom" required>
@@ -32,10 +31,9 @@
                             <button type="submit">Inscription</button>
                         </div>
                     </form>
-                        <p>Vous avez déjà un compte ?  <a href="{{route('login')}}">Se connecter</a></p>
+                    <p>Vous avez déjà un compte ?  <a href="{{route('login')}}">Se connecter</a></p>
                 </div>    
             </div>  
         </div>
-    <script src="../Scrip.js"></script>
-@endsection
-
+        <script src="../Scrip.js"></script>
+        @endsection
