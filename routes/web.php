@@ -22,8 +22,8 @@ Route::get('/actualites', function () {
     return view('actualites.actualites');
 })->name('actualites');
 
-Route::get('/connexion', function () {
-    return view('connexion.connexion');
+Route::get('/auth', function () {
+    return view('auth.connexion');
 })->name('connexion');
 
 
