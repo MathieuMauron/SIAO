@@ -24,7 +24,7 @@
                         <div class="input-group">
                             <button type="submit">Connexion</button>
                         </div>
-                        <p class="register-link">Pas encore de compte ? <a href="./page_inscription.php">Inscrivez-vous</a></p>
+                        <p class="register-link">Pas encore de compte ? <a href="{{route('register')}}">Inscrivez-vous</a></p>
                     </form>
                 </div>
             </div>

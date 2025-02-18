@@ -11,8 +11,8 @@
     <body>
     <div class="body">
             <div class="top">
-            <a class="imglogo" href="../accueil/home.php">
-                <img class="imglogo1" src="../images/itinova.png"></a>
+            <a class="imglogo" href="{{route('home')}}">
+                <img class="imglogo1" src="{{asset('img/itinova.png')}}"></a>
                 @include('layout.navbar')
             </div>
        @yield('content')

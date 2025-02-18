@@ -24,7 +24,7 @@
                             Le SIAO 115 <br>
                             Service intégré d'accueil et d'orientation                        
                         </h2>
-                        <img class="organigrame" src="../images/Organigrame.png" alt="organisme">
+                        <img class="organigrame" src="{{asset('img/Organigramme.png')}}" alt="organisme">
                     </section>
                 </div>
             </div>
