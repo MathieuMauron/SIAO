@@ -12,14 +12,15 @@
                             echo '<p style="color: red; text-align: center;">Email ou mot de passe incorrect !</p>';
                         }
                     ?>
-                    <form action="connexion.php" method="post">
+                    <form action="/login" method="post">
+                        @csrf
                         <div class="input-group">
                             <label for="email">Email</label>
                             <input type="text" id="email" name="email" required>
                         </div>
                         <div class="input-group">
-                            <label for="mot_de_passe">Mot de passe</label>
-                            <input type="password" id="password" name="mot_de_passe" required>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="password" required>
                         </div>
                         <div class="input-group">
                             <button type="submit">Connexion</button>

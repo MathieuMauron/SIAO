@@ -12,13 +12,16 @@
             </a>
 
             <!-- Vérifiez si l'utilisateur est connecté -->
-            <?php if (isset($_SESSION['user_name'])): ?>
+            @auth
+            <a href="../connexion/profil.php">Mon Profil {{Auth::user()->name}}</a></li>
+            @endauth
                 <!-- Si l'utilisateur est connecté, on affiche le bouton Mon Profil -->
-                <a href="../connexion/profil.php">Mon Profil (<?php echo htmlspecialchars($_SESSION['user_name']); ?>)</a></li>
-            <?php else: ?>
+                
+            @guest
+            <a href="{{route('login')}}">Se Connecter/S'inscrire</a></li>
+            @endguest
                 <!-- Sinon, on affiche le bouton de connexion -->
-                <a href="{{route('login')}}">Se Connecter/S'inscrire</a></li>
-            <?php endif; ?>
+                
         </div>
     </ul>  
 </nav>

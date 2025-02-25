@@ -14,18 +14,19 @@
                     }
                     ?>
 
-<form action="inscription.php" method="POST">
+        <form action="/register" method="POST">
+            @csrf
                         <div class="input-group">
-                            <label for="nom">Nom</label>
-                            <input type="text" id="nom" name="nom" required>
+                            <label for="name">Nom</label>
+                            <input type="text" id="nom" name="name" required>
                         </div>
                         <div class="input-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="input-group">
-                            <label for="mot_de_passe">Mot de passe</label>
-                            <input type="password" id="password" name="mot_de_passe" required>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" id="password" name="password" required>
                         </div>
                         <div class="input-group">
                             <button type="submit">Inscription</button>
