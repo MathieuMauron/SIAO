@@ -1,5 +1,4 @@
-@extends('layout.app')
-@section('content')
+
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
         <div class="content">
             <!-- Affichage du message de succès -->
@@ -73,5 +72,3 @@
             </div>
         </div>
         <script src="Scrip.js"></script>
-      
-@endsection
