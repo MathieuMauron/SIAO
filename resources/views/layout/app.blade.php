@@ -16,6 +16,6 @@
                 @include('layout.navbar')
             </div>
        @yield('content')
-       @include('layouts.footer')
+       @include('layout.footer')
     </body>
 </html>
