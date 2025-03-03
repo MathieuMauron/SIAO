@@ -17,10 +17,21 @@
                         <div class="input-group">
                             <label for="email">Email</label>
                             <input type="text" id="email" name="email" required>
+                            @if ($errors->has('email'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
                         <div class="input-group">
                             <label for="password">Mot de passe</label>
                             <input type="password" id="password" name="password" required>
+                        
+                        @if ($errors->has('password'))
+                                <span class="invalid-feedback">
+                                    <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
                         </div>
                         <div class="input-group">
                             <button type="submit">Connexion</button>
