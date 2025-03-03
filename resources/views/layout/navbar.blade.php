@@ -13,7 +13,7 @@
 
             <!-- Vérifiez si l'utilisateur est connecté -->
             @auth
-            <a href="../connexion/profil.php">Mon Profil {{Auth::user()->name}}</a></li>
+            <a href="{{route('profil')}}">Mon Profil {{Auth::user()->name}}</a></li>
             @endauth
                 <!-- Si l'utilisateur est connecté, on affiche le bouton Mon Profil -->
                 

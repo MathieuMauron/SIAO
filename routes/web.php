@@ -29,11 +29,13 @@ use Illuminate\Support\Facades\Route;
 
     Route::post('/login',[AuthController::class, 'login']);
 
-    Route::get('/profil', function(){
-        return view('connexion.profil');
-    });
+    Route::get('/profil', function () {
+        return view('auth.profil');
+    })->name('profil');
 
     Route::get('/register', function () {
         return view('auth.register');
     })->name('register');
     Route::post('/register', [AuthController::class, 'register']);
+
+    
