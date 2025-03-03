@@ -14,9 +14,9 @@
             <div class="top">
             <a class="imglogo" href="{{route('home')}}">
                 <img class="imglogo1" src="{{asset('img/itinova.png')}}"></a>
-                @include('layout.navbar')
+                @include('layout2.navbar')
             </div>
-       @yield('content')
-       @include('layout.footer')
+       @yield('hahaha')
+       @include('layout2.footer')
     </body>
 </html>

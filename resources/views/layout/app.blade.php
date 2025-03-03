@@ -15,7 +15,7 @@
                 <img class="imglogo1" src="{{asset('img/itinova.png')}}"></a>
                 @include('layout.navbar')
             </div>
-       @yield('content')
+       @yield('contenu')
        @include('layout.footer')
     </body>
 </html>
