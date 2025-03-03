@@ -14,13 +14,12 @@
             </div>
 
             <div class="act">
-                <?php 
-                    if (isset($_SESSION['user_name']) && $_SESSION['email']=='admin@gmail.com') {
-                        echo '<center><a href="../article/ajouter_un_article.php">Ajouter un article</a></center> ';
-                    }
-                ?><br>
+                    @if (Auth::user() && Auth::user()->email=='admin@gmail.com')
+                       <center><a href="{{route('add_actu')}}">Ajouter un article</a></center>
+                    @endif
+                    <br>
                 <div class="actu">
-
+                    
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@
                 {{Auth::user()->name}}</h1>
                 <p>Voici vos informations :</p>
                 <div class="déconnexion">
-                    <a href="logout.php">Déconnexion</a>
+                    <a href='{{route("logout")}}'>Déconnexion</a>
                 </div>             
             </div>
             </center>
