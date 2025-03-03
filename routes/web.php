@@ -44,6 +44,10 @@ use Illuminate\Support\Facades\Route;
     })->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 
+    Route::post('/add_actu', function () {
+        return view('');
+    });
+
     
 
     
