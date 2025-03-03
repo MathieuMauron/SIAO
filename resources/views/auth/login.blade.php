@@ -1,6 +1,5 @@
 @extends('layout.app')
 @section('content')
-    
 
 <link rel="stylesheet" href="../css/connexion.css">
             <div class="container">
@@ -42,5 +41,6 @@
             </div>
         </div>
         <script src="../Scrip.js"></script>
+       
 @endsection
 

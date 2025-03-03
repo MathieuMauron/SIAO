@@ -15,13 +15,6 @@
                             <label class="label" for="accroche">Phrase d'accroche</label><br>
                             <input class="accroche" type="text" name="accroche" rows="8" required></textarea>
                         </div>
-
-                        <div>
-                            <label class="label" for="accroche">Ajouter une image</label><br>
-                            <input class="accroche" type="file" name="accroche" rows="8" required></textarea>
-                        </div>
-
-
                         <div>
                             <label class="label" for="contenu">Contenu de l'article :</label><br>
                             <textarea class="content" name="content" rows="8" required></textarea>
