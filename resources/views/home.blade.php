@@ -1,5 +1,5 @@
 @extends('layout2.app')
-@section('content')
+@section('hahaha')
 <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
         <div class="content">
             <!-- Affichage du message de succès -->
