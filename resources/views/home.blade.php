@@ -1,6 +1,6 @@
 @extends('layout.app')
 @section('content')
-
+<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}"/>
         <div class="content">
             <!-- Affichage du message de succès -->
             <?php if (isset($_SESSION['success_message'])): ?>
