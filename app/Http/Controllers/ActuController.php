@@ -7,9 +7,5 @@ use Illuminate\Support\Facades\Auth;
 
 class ActuController extends Controller
 {
-    public function addActualite(){
-        if(Auth::user()->email==="admin@gmail.com"){
-            
-        }
-    }
+    
 }

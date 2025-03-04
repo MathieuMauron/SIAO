@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActuController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Route;
@@ -44,9 +45,7 @@ use Illuminate\Support\Facades\Route;
     })->name('register');
     Route::post('/register', [AuthController::class, 'register']);
 
-    Route::post('/add_actu', function () {
-        return view('');
-    });
+    Route::post('/add_actu', [ActuController::class, 'addActualite']);
 
     
 

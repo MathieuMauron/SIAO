@@ -6,7 +6,8 @@
             <div class="ajout_article">
                 <section class="bienvenue">
                     <h2>Ajouter un nouvel article</h2>
-                    <form action="('/add_actu')" method="POST">
+                    <form action="/add_actu" method="POST">
+                        @csrf
                         <div>
                             <label class="label" for="titre">Titre de l'article :</label><br>
                             <input type="text" class="titre" name="titre" required>
