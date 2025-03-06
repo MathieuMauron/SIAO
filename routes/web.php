@@ -28,6 +28,10 @@ use Illuminate\Support\Facades\Route;
         return view('actualites.add_actu');
     })->name('add_actu');
 
+    Route::post('/add_actu', [ActuController::class, 'addActualite']);
+
+    Route::delete('delete_actu/{id}',[ActuController::class, 'delActu']);
+
     Route::get('/login', function () {
         return view('auth.login');
     })->name('login');
@@ -35,16 +39,14 @@ use Illuminate\Support\Facades\Route;
     Route::post('/login',[AuthController::class, 'login']);
     Route::get('/logout',[AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/profil', function () {
-        return view('auth.profil');
-    })->name('profil');
-
     Route::get('/register', function () {
         return view('auth.register');
     })->name('register');
     Route::post('/register', [AuthController::class, 'register']);
-
-    Route::post('/add_actu', [ActuController::class, 'addActualite']);
+    
+    Route::get('/profil', function () {
+        return view('auth.profil');
+    })->name('profil');
 
     
 

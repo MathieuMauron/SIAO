@@ -7,7 +7,7 @@
                 <section class="bienvenue">
                     <h2>Ajouter un nouvel article</h2>
                     <center>
-                        <form action="/add_actu" method="POST">
+                        <form action="/add_actu" method="POST" class="add_actu">
                             @csrf
                             <div>
                                 <label class="label" for="titre">Titre de l'article :</label><br>

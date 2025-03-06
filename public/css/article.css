@@ -1,8 +1,4 @@
-form{
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-}
+/*  */
 
 .label{
     font-size: 1.2rem;
@@ -59,9 +55,46 @@ form{
     padding: 20px;
     margin: 70px 150px;
 }
-
+.delete-form-container {
+    width: 100%; /* Utilise toute la largeur disponible */
+    box-sizing: border-box; /* Prend en compte les paddings */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: center; /* Centre le formulaire */
+}
 .article-card {
-    width: 30%;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left; /* Aligner le texte à gauche pour éviter l'empilement */
+    width: 100%; /* S'assurer que la carte ne dépasse pas */
+    box-sizing: border-box; /* Inclut les paddings dans la largeur totale */
+}
+
+.article-card form {
+    display: flex;
+    justify-content: center; /* Centrer le bouton */
+    margin-top: 15px; /* Espacement entre l'article et le formulaire */
+    width: 100%; /* Prendre toute la largeur disponible */
+}
+
+.article-card button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Taille du bouton en fonction de son contenu */
+    max-width: 100%; /* Eviter que le bouton ne dépasse */
+}
+
+.article-card button:hover {
+    background-color: darkred;
 }
 
 .article-title {

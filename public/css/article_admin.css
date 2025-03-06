@@ -11,7 +11,7 @@
 }
 
 /* Formulaire */
-form {
+.add_actu {
     display: flex;
     flex-direction: column;
     align-items: center;

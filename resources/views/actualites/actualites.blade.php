@@ -20,17 +20,28 @@
                     <br>
                     <div class="actu">
                         @foreach ($actualites as $index => $actualite)
-                            <div class="article-card">
-                                <h2 class="article-title">{{ $actualite->titre }}</h2>
-                                <h3 class="article-subtitle">{{ $actualite->accroche }}</h3>
-                                <p class="article-author">Publié par {{ $actualite->nom }} le {{ $actualite->created_at }} </p>
-                                <a href="../article/lire_plus.php" class="article-link">Lire plus</a>
-                            </div>
+                        <div class="article-card">
+                            <h2 class="article-title">{{ $actualite->titre }}</h2>
+                            <h3 class="article-subtitle">{{ $actualite->accroche }}</h3>
+                            <p class="article-author">Publié par {{ $actualite->nom }} le {{ $actualite->created_at }} </p>
+                            <a href="../article/lire_plus.php" class="article-link">Lire plus</a>
+                        
+                            @if (Auth::user() && Auth::user()->email === 'admin@gmail.com')
+                                <div class="delete-form-container">
+                                    <form method="POST" action="/delete_actu/{{$actualite->id}}">
+                                        @csrf
+                                        @method('delete')
+                                        <button type="submit">Supprimer</button>
+                                    </form>
+                                </div>
+                            @endif
+                        </div>
                     
-                            {{-- Ajoute un saut de ligne toutes les 3 actualités --}}
                             @if (($index + 1) % 3 == 0)
                                 <div style="width: 100%; margin-top:15px"></div>
                             @endif
+
+                            
                         @endforeach
                     </div>
             </div>

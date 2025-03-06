@@ -17,4 +17,11 @@ class ActuController extends Controller
         ]);  
         return to_route('actualites');  
     }
+
+    public function delActu($id){
+        $actu = Actualites::find($id);
+        $actu->delete();
+        // dd($client);
+        return to_route('actualites');
+    }
 }
