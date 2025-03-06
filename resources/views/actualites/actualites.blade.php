@@ -27,12 +27,13 @@
                             <a href="../article/lire_plus.php" class="article-link">Lire plus</a>
                         
                             @if (Auth::user() && Auth::user()->email === 'admin@gmail.com')
-                                <div class="delete-form-container">
+                                <div class="delete-form-container" style="display:flex; justify-content:space-around">
                                     <form method="POST" action="/delete_actu/{{$actualite->id}}">
                                         @csrf
                                         @method('delete')
                                         <button type="submit">Supprimer</button>
                                     </form>
+                                    <button><a style="color:white" href="{{ route('modif_actu', $actualite->id) }}">Modifier</a></button>
                                 </div>
                             @endif
                         </div>
