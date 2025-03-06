@@ -24,7 +24,7 @@
                             <h2 class="article-title">{{ $actualite->titre }}</h2>
                             <h3 class="article-subtitle">{{ $actualite->accroche }}</h3>
                             <p class="article-author">Publié par {{ $actualite->nom }} le {{ $actualite->created_at }} </p>
-                            <a href="../article/lire_plus.php" class="article-link">Lire plus</a>
+                            <center><a href="../article/lire_plus.php" class="article-link">Lire plus</a></center>
                         
                             @if (Auth::user() && Auth::user()->email === 'admin@gmail.com')
                                 <div class="delete-form-container" style="display:flex; justify-content:space-around">
