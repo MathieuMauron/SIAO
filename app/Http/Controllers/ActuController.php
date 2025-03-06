@@ -22,4 +22,20 @@ class ActuController extends Controller
             return to_route('actualites');
         }
     }
+
+    public function delActu($id) {
+        $actu = Actualites::find($id);
+        $actu->delete();
+        return to_route('actualites');
+    }
+
+    public function editActu($id){
+        $actualite = Actualites::find($id);
+        $actualite->titre = request('titre');
+        $actualite->accroche = request('accroche');
+        $actualite->content = request('content');
+        $actualite->save();
+    
+        return to_route('actualites'); 
+    }
 }

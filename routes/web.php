@@ -34,15 +34,7 @@ use Illuminate\Support\Facades\Route;
         return view('actualites.modif_actu', compact('actualite'));
     })->name('modif_actu');
 
-    Route::put('/update_actu/{id}', function ($id) {
-        $actualite = Actualites::find($id);
-        $actualite->titre = request('titre');
-        $actualite->accroche = request('accroche');
-        $actualite->content = request('content');
-        $actualite->save();
-    
-        return redirect()->route('actualites');  
-    })->name('update_actu');
+    Route::put('/update_actu/{id}', [ActuController::class, 'editActu'])->name('update_actu');
 
     
     Route::get('/login', function () {
