@@ -12,7 +12,7 @@
     <div class="body">
             <div class="top">
             <a class="imglogo" href="{{route('home')}}">
-                <img class="imglogo1" src="{{asset('img/itinova.png')}}"></a>
+                <img class="imglogo1" src="{{asset('img/logo.png')}}"></a>
                 @include('layout.navbar')
             </div>
        @yield('content')

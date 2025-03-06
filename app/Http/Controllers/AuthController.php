@@ -19,10 +19,16 @@ class AuthController extends Controller
             'password' => ['required', 'string']
         ]);
         // dd($credentials);
-        return Auth::attempt($credentials) ? to_route('home') : to_route('login');
-    } catch (Exception $e){
+        if (Auth::attempt($credentials)) {
+            return to_route('home');
+        } else {
+            return to_route('login')->withErrors(['email' => 'Vos identifiants sont incorrects'])->onlyInput('email');
+        }
         
-        dd($e);
+    } catch (Exception $e){
+        return to_route('auth.login')->withErrors([
+            'email' => 'Vos identifiants sont incorrects'
+        ])->onlyInput('email');
     }
     }
 
