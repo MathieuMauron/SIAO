@@ -2,14 +2,11 @@
 
 use App\Http\Controllers\ActuController;
 use App\Http\Controllers\AuthController;
+use App\Models\Actualites;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Route;
 
     Route::get('/', function () {
-        return view('welcome');
-    });
-
-    Route::get('/home', function () {
         return view('home');
     })->name('home');
 
@@ -22,7 +19,9 @@ use Illuminate\Support\Facades\Route;
     })->name('equipe');
 
     Route::get('/actualites', function () {
-        return view('actualites.actualites');
+        return view('actualites.actualites',[
+            'actualites' => Actualites::all()
+        ]);
     })->name('actualites');
 
     Route::get('/add_actu', function () {
