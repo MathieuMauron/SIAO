@@ -29,6 +29,8 @@ use Illuminate\Support\Facades\Route;
     Route::post('/add_actu', [ActuController::class, 'addActualite']);
     Route::delete('delete_actu/{id}',[ActuController::class, 'delActu']);
 
+    Route::get('/lire_plus/{id}', [ActuController::class, 'lirePlus']);
+
     Route::get('/modif_actu/{id}', function ($id) {
         $actualite = Actualites::find($id);
         return view('actualites.modif_actu', compact('actualite'));
@@ -36,7 +38,6 @@ use Illuminate\Support\Facades\Route;
 
     Route::put('/update_actu/{id}', [ActuController::class, 'editActu'])->name('update_actu');
 
-    
     Route::get('/login', function () {
         return view('auth.login');
     })->name('login');

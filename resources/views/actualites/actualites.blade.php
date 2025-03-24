@@ -24,7 +24,8 @@
                             <h2 class="article-title">{{ $actualite->titre }}</h2>
                             <h3 class="article-subtitle">{{ $actualite->accroche }}</h3>
                             <p class="article-author">Publié par {{ $actualite->nom }} le {{ $actualite->created_at }} </p>
-                            <center><a href="../article/lire_plus.php" class="article-link">Lire plus</a></center>
+
+                            <center><a href="{{route('lire_plus')}}" class="article-link">Lire plus</a></center>
                         
                             @if (Auth::user() && Auth::user()->email === 'admin@gmail.com')
                                 <div class="delete-form-container" style="display:flex; justify-content:space-around">
@@ -37,12 +38,11 @@
                                 </div>
                             @endif
                         </div>
-                    
+                   
                             @if (($index + 1) % 3 == 0)
                                 <div style="width: 100%; margin-top:15px"></div>
                             @endif
-
-                            
+                   
                         @endforeach
                     </div>
             </div>

@@ -23,6 +23,10 @@ class ActuController extends Controller
         }
     }
 
+    public function lirePlus (Request $request){
+        
+    }
+
     public function delActu($id) {
         $actu = Actualites::find($id);
         $actu->delete();
