@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="../css/article_admin.css"/>
 <link rel="stylesheet" type="text/css" href="../style.css"/>
 
-
 <div class="actu">
     <div class="article-card">
         <h2 class="article-title">{{ $actualites->titre }}</h2>
