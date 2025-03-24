@@ -1,15 +1,24 @@
 @extends('layout.app')
 @section('content')
 
-<div class="article-detail">
-    <h1 class="article-title"><?php echo htmlspecialchars($article['titre']); ?></h1>
-    <p class="article-author">Publié par <?php echo htmlspecialchars($article['nom']); ?> le <?php echo htmlspecialchars($article['date_creation']); ?></p>
-    <div class="article-content">
-        <?php echo nl2br(htmlspecialchars($article['content'])); ?>
-    </div>
-</div>
-<script src="../Scrip.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="../css/article.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/article_admin.css"/>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+
+
+                    <div class="actu">
+                        <div class="article-card">
+                            <h2 class="article-title">{{ $actualites->titre }}</h2>
+                            <h3 class="article-subtitle">{{ $actualites->accroche }}</h3>
+                            <p class="article-author">Publié par {{ $actualites->nom }} le {{ $actualites->created_at }} </p>
+                            <p>content : {{$actualites->content}}</p>
+                        </div>
+                   
+                    </div>
+        </div>
+        <script src="Scrip.js"></script>
+        
 @endsection
 
 

@@ -12,7 +12,12 @@ class ActuController extends Controller
     public function addActualite(Request $request){
         // dd($request);
         if(Auth::user()->email==="admin@gmail.com"){
-            
+            $request->validate([
+                'titre' => 'required',
+                'content' => 'required',
+                'accroche' => 'required',
+                'image' => 'image|max:2000'
+            ]);
             Actualites::create([
                 'titre' => $request->titre,
                 'content' => $request->content,
@@ -23,9 +28,6 @@ class ActuController extends Controller
         }
     }
 
-    public function lirePlus (Request $request){
-        
-    }
 
     public function delActu($id) {
         $actu = Actualites::find($id);

@@ -25,7 +25,7 @@
                             <h3 class="article-subtitle">{{ $actualite->accroche }}</h3>
                             <p class="article-author">Publié par {{ $actualite->nom }} le {{ $actualite->created_at }} </p>
 
-                            <center><a href="{{route('lire_plus')}}" class="article-link">Lire plus</a></center>
+                            <center><a href="/lire_plus/{{$actualite->id}}" class="article-link">Lire plus</a></center>
                         
                             @if (Auth::user() && Auth::user()->email === 'admin@gmail.com')
                                 <div class="delete-form-container" style="display:flex; justify-content:space-around">

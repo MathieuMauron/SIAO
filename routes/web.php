@@ -29,7 +29,10 @@ use Illuminate\Support\Facades\Route;
     Route::post('/add_actu', [ActuController::class, 'addActualite']);
     Route::delete('delete_actu/{id}',[ActuController::class, 'delActu']);
 
-    Route::get('/lire_plus/{id}', [ActuController::class, 'lirePlus']);
+    Route::get('/lire_plus/{id}', function($id) {
+        // dd(Actualites::find($id))
+;        return view('actualites.plus', ['actualites' => Actualites::find($id)]);
+    });
 
     Route::get('/modif_actu/{id}', function ($id) {
         $actualite = Actualites::find($id);
