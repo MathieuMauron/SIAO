@@ -26,6 +26,109 @@
   }
 }
 
+/* === AJOUT : Responsive général pour petit écran (mobile) === */
+@media screen and (max-width: 768px) {
+  .imglogo1 {
+    width: 200px; /* logo plus petit */
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .présentation {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .conteneur_acceuil {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px 10px;
+  }
+
+  .paragraphe {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .redir {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+/* === AJOUT : Responsive pour tablettes (entre 768px et 1024px) === */
+@media screen and (max-width: 720px) {
+
+  body {
+    font-size: 15px; /* légèrement réduit pour s'adapter aux petits écrans */
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  .imglogo1 {
+    width: 300px;
+  }
+
+  .conteneur_acceuil {
+    margin-left: 7%;
+    margin-right: 7%;
+  }
+
+.paragraphe {
+  padding: 15px;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.paragraphe p, .paragraphe li {
+  font-size: 0.5rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+
+h2, h3, h4 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+  .site_externe {
+    flex-direction: column;
+  }
+
+  .site_externe .redir {
+    font-size: 14px;
+    padding: auto;
+    min-width: 120px;
+  }
+
+  .bienvenue, .modif, .nous-contacter {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
 html, body {
   height: 100%; /* Assure que le body prend toute la hauteur de la page */
   margin: 0;
@@ -157,8 +260,18 @@ section {
 }
 
 .site_externe {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.site_externe .redir {
+  padding: 10px 20px;
+  font-size: 16px;
+  width: auto;
+  min-width: 150px;
 }
 
 .redir {
@@ -166,7 +279,7 @@ section {
   color: white;
   font-weight: bold;
   padding: 15px;
-  margin: 30px;
+  margin: 15px;
   border: 0px;
   border-radius: 10px;
   background-color: #013e9a;

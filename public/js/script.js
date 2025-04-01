@@ -9,4 +9,3 @@ function myFunction() {
       nav.className = "nav";
     }
   }
-  
