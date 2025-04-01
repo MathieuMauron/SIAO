@@ -59,6 +59,7 @@
 }
 
 .article-card {
+    margin: 30px;
     background: white;
     border-radius: 12px;
     padding: 22px;
