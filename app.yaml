@@ -16,3 +16,6 @@ handlers:
 
   - url: /.*
     script: auto
+
+beta_settings:
+  cloud_sql_instances: projet-2-siao:europe-west1:bddsiao

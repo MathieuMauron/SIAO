@@ -36,5 +36,5 @@
                 </div>    
             </div>  
         </div>
-        <script src="../Scrip.js"></script>
+        <script src="../scrip.js"></script>
         @endsection

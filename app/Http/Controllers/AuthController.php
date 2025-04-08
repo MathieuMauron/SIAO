@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use function Laravel\Prompts\password;
+use Illuminate\Support\Facades\DB;
+
 
 class AuthController extends Controller
 {
@@ -38,17 +40,28 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-        ]);
-        // dd($request);
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-        return redirect('/login')->with('success', 'Registration successful! Please log in.');
+        try {
+            // Test de la connexion à la base de données
+            DB::connection()->getPdo(); // Tentative de connexion à la DB
+            
+            $request->validate([
+                'name' => 'required',
+                'email' => 'required|email|unique:users',
+                'password' => 'required|min:6',
+            ]);
+    
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+            ]);
+    
+            return redirect('/login')->with('success', 'Registration successful! Please log in.');
+        } catch (\Exception $e) {
+            return redirect('/register')->withErrors([
+                'email' => 'Error: Could not connect to the database. Please try again later.'
+            ]);
+        }
     }
+    
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('content');
             $table->string('nom');
             $table->string('accroche');
-            $table->timestamps('date_creation');
+            $table->timestamps();
         });
     }
 
