@@ -24,5 +24,3 @@ $app = Application::configure(basePath: dirname(__DIR__))
 $app->useStoragePath('/tmp/storage');
 
 return $app;
-
-

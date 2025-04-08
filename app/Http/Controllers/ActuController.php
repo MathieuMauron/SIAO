@@ -10,7 +10,7 @@ class ActuController extends Controller
 {
 
     public function addActualite(Request $request){
-        dd($request);
+        // dd($request);
         if(Auth::user()->email==="admin@gmail.com"){
             $request->validate([
                 'titre' => 'required',

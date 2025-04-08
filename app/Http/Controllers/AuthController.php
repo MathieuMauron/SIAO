@@ -40,6 +40,7 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
+
         try {
             // Test de la connexion à la base de données
             DB::connection()->getPdo(); // Tentative de connexion à la DB
@@ -50,13 +51,14 @@ class AuthController extends Controller
                 'password' => 'required|min:6',
             ]);
     
-            User::create([
+            $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);
-    
+            
             return redirect('/login')->with('success', 'Registration successful! Please log in.');
+        
         } catch (\Exception $e) {
             return redirect('/register')->withErrors([
                 'email' => 'Error: Could not connect to the database. Please try again later.'
