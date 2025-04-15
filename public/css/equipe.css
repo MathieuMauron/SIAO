@@ -1,3 +1,37 @@
 .organigrame {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
     border-radius: 30px;
-}
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  @media (max-width: 768px) {
+    .organigrame {
+      width: 100%;
+      border-radius: 15px;
+    }
+  
+    iframe#maps {
+      width: 100% !important;
+      height: 300px;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .organigrame {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    iframe#maps {
+      height: 250px;
+    }
+  }
+  

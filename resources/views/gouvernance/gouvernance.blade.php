@@ -27,5 +27,5 @@
                 </div> 
             </div>
         </div>
-        <script src="../Scrip.js"></script>
+        <script src="{{ asset('js/script.js') }}"></script>
 @endsection
