@@ -44,8 +44,8 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => '127.0.0.1', // valeur neutre
-            'unix_socket' => env('DB_HOST'), // c'est ici qu'on force le vrai socket
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'unix_socket' => env('DB_SOCKET', ''),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
