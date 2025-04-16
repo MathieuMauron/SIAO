@@ -17,6 +17,15 @@ use Illuminate\Support\Facades\DB;
         }
     });
 
+    Route::get('/test-view', function () {
+        return view('test');
+    });
+    
+
+    Route::get('/test-home', function () {
+        return response('✅ Route test simple OK', 200);
+    });
+
     Route::get('/', function () {
         return view('home');
     })->name('home');

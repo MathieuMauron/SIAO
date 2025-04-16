@@ -22,6 +22,9 @@ beta_settings:
 
 env_variables:
   APP_ENV: production
+  APP_URL: https://projet-2-siao-456710.ew.r.appspot.com/
+  APP_KEY: base64:j8qi9r3vubRMyWPegra2KbGeWBLdjEVdOStgiATxyP8=
+  APP_DEBUG: true
   DB_CONNECTION: mysql
   DB_HOST: /cloudsql/projet-2-siao-456710:europe-west1:bddsiao
   DB_PORT: 3306
