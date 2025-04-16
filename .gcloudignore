@@ -1,12 +1,14 @@
-# Ne pas exclure config et vues
-!config/**
-!resources/views/**
-
-# Ignorer seulement ce qui est inutile
+﻿# Fichiers à ignorer
 /vendor/
 node_modules/
 .env
 .env.*
-.phpunit.cache
-.phpunit.result.cache
+*.log
 
+# ✅ Forcer l'inclusion des vues Laravel
+!resources/views/**
+!resources/views/*.blade.php
+
+# ✅ Inclure configs essentielles
+!config/**
+!routes/**

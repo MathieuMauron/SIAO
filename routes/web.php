@@ -6,6 +6,7 @@ use App\Models\Actualites;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 
     Route::get('/db-test', function () {
@@ -18,6 +19,9 @@ use Illuminate\Support\Facades\DB;
     });
 
     Route::get('/test-view', function () {
+        // ⚠️ Forcer l’inclusion du fichier dans le déploiement
+        File::get(resource_path('views/test.blade.php'));
+    
         return view('test');
     });
     
