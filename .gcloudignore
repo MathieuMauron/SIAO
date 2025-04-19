@@ -1,14 +1,24 @@
-﻿# Fichiers à ignorer
-/vendor/
+﻿# Ignorer les dépendances, fichiers temporaires et dev
 node_modules/
+*.log
 .env
 .env.*
-*.log
+storage/*.key
+/vendor/
 
-# ✅ Forcer l'inclusion des vues Laravel
+# Inclure tout le reste (très important pour Laravel)
+!app/
+!bootstrap/
+!config/
+!database/
+!public/
+!resources/
+!routes/
+!storage/
+!artisan
+!composer.*
+!server.php
+!package.json
+!webpack.mix.js
+!public/index.php
 !resources/views/**
-!resources/views/*.blade.php
-
-# ✅ Inclure configs essentielles
-!config/**
-!routes/**

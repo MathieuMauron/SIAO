@@ -24,8 +24,16 @@ use Illuminate\Support\Facades\File;
     
         return view('test');
     });
-    
 
+    Route::get('/db-test2', function () {
+        try {
+            DB::connection()->getPdo();
+            return '✅ Connexion DB OK';
+        } catch (\Exception $e) {
+            return '❌ Erreur DB : ' . $e->getMessage();
+        }
+    });
+    
     Route::get('/test-home', function () {
         return response('✅ Route test simple OK', 200);
     });
