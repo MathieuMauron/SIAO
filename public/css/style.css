@@ -398,4 +398,9 @@ footer {
     margin-left: auto;
     z-index: 1000; /* au cas où il serait caché par un autre élément */
   }
+
+  .nav ul li a:hover {
+    margin-right: 25px;
+
+  }
 }
