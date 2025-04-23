@@ -27,7 +27,7 @@ class AuthController extends Controller
         }
         
     } catch (Exception $e){
-        return to_route('auth.login')->withErrors([
+        return to_route('login')->withErrors([
             'email' => 'Vos identifiants sont incorrects'
         ])->onlyInput('email');
     }
@@ -51,7 +51,7 @@ class AuthController extends Controller
                 'password' => 'required|min:6',
             ]);
     
-            $user = User::create([
+            User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
