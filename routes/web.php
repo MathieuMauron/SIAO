@@ -6,6 +6,7 @@ use App\Models\Actualites;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 
     Route::get('/db-test', function () {
@@ -15,6 +16,26 @@ use Illuminate\Support\Facades\DB;
         } catch (\Exception $e) {
             return "❌ Erreur de connexion : " . $e->getMessage();
         }
+    });
+
+    Route::get('/test-view', function () {
+        // ⚠️ Forcer l’inclusion du fichier dans le déploiement
+        File::get(resource_path('views/test.blade.php'));
+    
+        return view('test');
+    });
+
+    Route::get('/db-test2', function () {
+        try {
+            DB::connection()->getPdo();
+            return '✅ Connexion DB OK';
+        } catch (\Exception $e) {
+            return '❌ Erreur DB : ' . $e->getMessage();
+        }
+    });
+    
+    Route::get('/test-home', function () {
+        return response('✅ Route test simple OK', 200);
     });
 
     Route::get('/', function () {
