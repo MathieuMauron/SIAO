@@ -16,7 +16,6 @@ class ActuController extends Controller
                 'titre' => 'required',
                 'content' => 'required',
                 'accroche' => 'required',
-                'image' => 'image|max:2000'
             ]);
             Actualites::create([
                 'titre' => $request->titre,

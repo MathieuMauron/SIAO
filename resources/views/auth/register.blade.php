@@ -27,6 +27,9 @@
                         <div class="input-group">
                             <label for="password">Mot de passe</label>
                             <input type="password" id="password" name="password" required>
+                            <small id="passwordHelpBlock" class="form-text text-muted" aria-describedby="passwordHelpBlock" style="align-items: center">
+                                Password must be at least 8 characters, contain one uppercase letter, one digit, and one special character (@$!%*#?&)
+                            </small>
                         </div>
                         <div class="input-group">
                             <button type="submit">Inscription</button>

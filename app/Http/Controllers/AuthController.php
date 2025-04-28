@@ -43,12 +43,19 @@ class AuthController extends Controller
 
         try {
             // Test de la connexion à la base de données
-            DB::connection()->getPdo(); // Tentative de connexion à la DB
             
             $request->validate([
                 'name' => 'required',
                 'email' => 'required|email|unique:users',
-                'password' => 'required|min:6',
+                'password' => [
+                    'required',
+                    'string',
+                    'min:8',
+                    'regex:/[A-Z]/',
+                    'regex:/[0-9]/',
+                    'regex:/[@$!%*#?&]/',
+                    'regex:/^[A-Za-z0-9@$!%*#?&]*$/',
+                ],
             ]);
     
             User::create([

@@ -89,6 +89,14 @@ use Illuminate\Support\Facades\File;
         return view('auth.profil');
     })->name('profil');
 
-    
+    Route::get('/test-view', function () {
+        return view('home');
+    });
 
-    
+    Route::get ('/test', function() {
+        return view('test');
+    });
+
+    Route::get('/tests', function(){
+        return view('tests');
+    });
