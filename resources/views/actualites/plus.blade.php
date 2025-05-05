@@ -10,7 +10,7 @@
         <h2 class="article-title">{{ $actualites->titre }}</h2>
         <h3 class="article-subtitle">{{ $actualites->accroche }}</h3>
         <p class="article-author">Publié par {{ $actualites->nom }} le {{ $actualites->created_at }} </p>
-        <p>{{$actualites->content}}</p>
+        <p class="article-description">{{$actualites->content}}</p>
     </div>                 
 </div>
 <script src="Scrip.js"></script>

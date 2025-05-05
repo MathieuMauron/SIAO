@@ -14,7 +14,6 @@
     flex-direction: column;
     align-items: center;
     background: white;
-    padding: 25px;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     max-width: 450px;
@@ -28,7 +27,7 @@
 }
 
 .content, .accroche {
-    width: 100%;
+    width: 80%;
     font-size: 1rem;
     padding: 12px;
     border-radius: 10px;
@@ -36,6 +35,16 @@
     margin-bottom: 12px;
     transition: all 0.3s;
     background: #fff;
+}
+
+.titre {
+    width: 80%;
+    font-size: 1rem;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    transition: all 0.3s;
+    background: #fff;  
 }
 
 .content:focus, .accroche:focus {
@@ -121,4 +130,15 @@
 .ajout_article, .bienvenue {
     padding: 60px 20px;
     text-align: center;
+}
+
+
+.bouton {
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #013e9a;
+    cursor: pointer;
 }

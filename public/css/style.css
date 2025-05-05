@@ -284,7 +284,28 @@ footer {
 }
 
 /* === Responsive Design === */
-@media (max-width: 1024px) {
+@media (max-width: 1510px) {
+    .nav ul li a {
+      font-size: 14px; 
+  }
+
+  .imglogo1 {
+    width: 300px; 
+  }
+}
+
+@media (max-width: 1280px) {
+  .nav ul li a {
+    font-size: 13.5px; 
+}
+
+.imglogo1 {
+  width: 250px; 
+}
+}
+
+
+@media (max-width: 1222px) {
 
   .conteneur_acceuil {
     margin-left: 5%;
@@ -401,6 +422,5 @@ footer {
 
   .nav ul li a:hover {
     margin-right: 25px;
-
   }
 }

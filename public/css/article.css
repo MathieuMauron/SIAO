@@ -22,16 +22,21 @@
 }
 
 .titre {
-    text-align: center;
+    width: 80%;
+    font-size: 1rem;
+    margin: auto;
+    text-align: centerarticle-description;
 }
 
 .phrase_intro {
+    display: flex;
     padding-left: 50px;
     border-left: 4px solid #0056b3;
     margin-left: 20%;
     border-radius: 5px;
     margin-top: 50px;
     font-size:large;
+    margin: 15px;
 }
 
 .body {
@@ -55,6 +60,7 @@
     padding: 20px;
     margin: 70px 150px;
 }
+
 .delete-form-container {
     width: 100%;
     box-sizing: border-box;
@@ -103,16 +109,34 @@ a:link
 .article-title {
     font-size: 20px;
     color: #333;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 16px;
 }
 
 .article-subtitle {
     font-size: 20px;
     color: #333;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 16px;
 }
 
 .article-author {
     color: #888;
     font-size: 12px;
+}
+
+.article-description {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    font-size: 16px;
 }
 
 .article-link {

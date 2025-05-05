@@ -9,15 +9,15 @@
         <center>
             <form action="/add_actu" method="POST" class="add_actu">
                 @csrf
-                <div>
+                <div class="section_titre">
                     <label class="label" for="titre">Titre de l'article :</label><br>
                     <input type="text" class="titre" name="titre" required>
                 </div>
-                <div>
+                <div class="section_accroche">
                     <label class="label" for="accroche">Phrase d'accroche</label><br>
                     <input class="accroche" type="text" name="accroche" rows="8" required></textarea>
                 </div>
-                <div>
+                <div class="section_contenu">
                     <label class="label" for="contenu">Contenu de l'article :</label><br>
                     <textarea class="content" name="content" rows="8" required></textarea>
                 </div>
