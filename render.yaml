@@ -1,0 +1,37 @@
+# render.yaml
+services:
+  - type: web
+    name: siao-laravel
+    runtime: docker
+    repo: https://github.com/<votre-utilisateur>/<votre-repo>
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        value: "base64:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      - key: APP_DEBUG
+        value: false
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        fromService:
+            name: siao-mysql
+            type: pserv
+            property: host
+      - key: DB_PORT
+        value: 3306
+      - key: DB_DATABASE
+        value: siao
+      - key: DB_USERNAME
+        value: root
+      - key: DB_PASSWORD
+        fromService:
+            name: siao-mysql
+            type: pserv
+            property: password
+
+databases:
+  - name: siao-mysql
+    databaseName: siao
+    user: root
